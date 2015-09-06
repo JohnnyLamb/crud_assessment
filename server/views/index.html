@@ -7,9 +7,59 @@
 
   <div class="container">
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+  <h1>Add an Animal</h1>
 
-  </div>
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" placeholder="name" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="friendly" placeholder="friendly or not" required>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+
+    <div id="results"></div>
+
+    <div id="animal-table">
+
+      <h2>All Animals</h2>
+
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Friendly or Not</th>
+            </tr>
+          </thead>
+          <tbody id="all">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <form id="edit-form">
+    <h2>Edit Animal</h2>
+    <div class="form-group">
+      <input type="text" class="form-control" id="edit-name">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="edit-friendly">
+    </div>
+    <button type="submit" class="btn btn-primary update-button">Update</button>
+    <button class="btn btn-success" id="cancel-edit">Cancel</button>
+  </form>
+
+
+
+   </div>
+
+
+
+
 
 {% endblock %}
