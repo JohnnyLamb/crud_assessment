@@ -1,5 +1,6 @@
 $(document).on('ready', function() {
   $('#all').html('');
+  $('#edit-form').hide();
   listAnimals();
 });
 // create payload to render animal to page
