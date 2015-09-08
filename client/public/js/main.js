@@ -1,6 +1,6 @@
 $(document).on('ready', function() {
   $('#all').html('');
-  $('#edit-form').hide();
+  // $('#edit-form').hide();
   listAnimals();
 });
 // create payload to render animal to page
@@ -16,7 +16,7 @@ $('form').on('submit',function(e){
     listAnimals();
   });
 });
-// delete request
+delete request
 $(document).on('click', '.delete-button', function(){
 
   $.ajax({
@@ -29,7 +29,21 @@ $(document).on('click', '.delete-button', function(){
   });
 
 });
+// editing a single animal functionality
+$(document).on('click', '.edit-button', function(){
+  $.get('/animal/'+$(this).attr('id'), function(data){
+    $('#edit-name').val(data.name);
+    $('#edit-friendly').val(data.friendly);
+    $('.update-button').attr('id', data._id);
+  });
+  $('#edit-form').show();
+  $('#animal-table').hide();
 
+});
+
+
+
+// function to render the new Animals to the page
 function listAnimals(){
   $('#all').html('');
   $.get('/animals', function(data){
