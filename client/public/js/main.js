@@ -37,6 +37,12 @@ $(document).on('click', '.edit-button', function(){
   $('#edit-form').show();
   $('#animal-table').hide();
 });
+// cancel request from edit view
+$(document).on('click', '#cancel-edit', function(e) {
+  e.preventDefault();
+  $('#edit-form').hide();
+  $('#animal-table').show();
+});
 
 // function to render the new Animals to the page
 function listAnimals(){
