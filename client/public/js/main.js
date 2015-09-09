@@ -16,7 +16,7 @@ $('form').on('submit',function(e){
     listAnimals();
   });
 });
-delete request
+// delete request
 $(document).on('click', '.delete-button', function(){
 
   $.ajax({
