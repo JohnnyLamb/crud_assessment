@@ -58,7 +58,6 @@ $(document).on('click', '.update-button', function(e) {
     name: $updatedAnimalName,
     ability: $updatedAnimalfriendly,
   };
-
   $.ajax({
     method: "PUT",
     url: '/animal/' + $(this).attr('id'),
@@ -70,11 +69,7 @@ $(document).on('click', '.update-button', function(e) {
     $('#animal-table').show();
     $('#new-animal').show();
   });
-
-
 });
-
-
 
 // function to render the new Animals to the page
 function listAnimals() {
