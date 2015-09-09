@@ -18,7 +18,6 @@ $('form').on('submit',function(e){
 });
 // delete request
 $(document).on('click', '.delete-button', function(){
-
   $.ajax({
     method: "DELETE",
     url: '/animal/'+$(this).attr('id')
@@ -27,7 +26,6 @@ $(document).on('click', '.delete-button', function(){
     $( "#results" ).html('Success!');
     listAnimals();
   });
-
 });
 // editing a single animal functionality
 $(document).on('click', '.edit-button', function(){
@@ -38,10 +36,7 @@ $(document).on('click', '.edit-button', function(){
   });
   $('#edit-form').show();
   $('#animal-table').hide();
-
 });
-
-
 
 // function to render the new Animals to the page
 function listAnimals(){
